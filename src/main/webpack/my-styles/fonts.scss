@@ -1,0 +1,34 @@
+//== Font
+
+$font-family:           sans-serif;
+$font-family-weight: 400;
+$font-family-style: normal;
+$font-size:             11pt;
+$font-height:           1.5;
+$font-color: #404040;
+
+h1 {
+    font-size: 28pt;
+    font-weight: 300;
+    font-style: $font-family-style;
+}
+h2 {
+    font-size: 16pt;
+    font-weight: 700;
+    font-style: $font-family-style;
+}
+h3 {
+    font-size: 15pt;
+    font-weight: $font-family-weight;
+    font-style: $font-family-style;
+}
+h4 {
+    font-size: 14pt;
+    font-weight: $font-family-weight;
+    font-style: $font-family-style;
+}
+h5,h6 {
+    font-size: 14pt;
+    font-weight: $font-family-weight;
+    font-style: $font-family-style;
+}

@@ -1,0 +1,143 @@
+html, body {
+    font-family: $font-family;
+    font-weight: $font-family-weight;
+    font-style: $font-family-style;
+}
+
+/* Make entire design left adjusted */
+h1,h2,h3,h4,h5,h6 {
+    text-align: left;
+    margin-bottom: auto;
+}
+
+/* Module/Chapter Titles */
+h1 {
+    margin: $margin-large 0;   
+}
+
+/* Exercise/Activity titles */
+h2 {
+    border-bottom: .1em solid;
+    padding-bottom: $padding-small;
+    margin: $margin-medium 0;
+}
+/* Subtopics (h3), Tasks (h4), sub-subtopics (h5), sub-sub-subtopics (h6) */
+h3,h4,h5,h6 {
+    margin: $margin-small 0;
+}
+
+/* Normal text */
+p { 
+    margin: 0 0 $margin-small 0;
+    line-height: $font-height;
+}
+
+/* Hyperlinks */
+a {
+    color: $color-link;
+}
+
+/* Lists */
+li {
+    line-height: $font-height;
+}
+
+/* Ordered Lists */
+ol > li::marker {
+    font-weight: bold;
+}
+
+/* Unordered Lists */
+
+/* Images */
+img, p>img:only-child {
+    border: 2px solid $color-border;
+    max-width: 50%;
+    display: block;
+    margin-top: $margin-medium;
+    margin-bottom: $margin-medium;
+}
+
+/* Note | Warning | Tip | Hint */
+/* Bold the first word/phrase to emphasize the blockquote type */
+blockquote {
+    border-left: 5px solid $color-blockquote-dark;
+
+    margin: $margin-medium $margin-small;
+    border-radius: 5px;
+    // border-bottom-left-radius: 5px;
+    padding: $padding-medium;
+    // padding-left: 0;
+  }
+  blockquote p {
+    display: inline;
+    color: $color-blockquote-dark;
+    strong:first-of-type {
+        font-size: 125%;
+        font-weight: 300;
+        text-transform: uppercase;
+    }
+  }
+  
+/* Tables */
+table {
+    margin: $margin-medium 0 $margin-medium 0;
+    display: block;
+    width: 100%;
+    width: max-content;
+    max-width: 100%;
+    overflow: auto;
+    border-spacing: 0;
+    // border: 1px solid $font-color;
+
+    th,td {
+        padding: $padding-small $padding-medium;
+        border: 1px solid $font-color;
+    }
+    tr > th {
+        border: 1px solid $font-color;
+        background-color: $color-background-shaded;
+        padding: $padding-medium;
+    }
+}
+
+/* Code Blocks */
+code {
+    font-size: 85%;
+    padding: $padding-small;
+    margin: 0;
+    background-color: $color-background-shaded;
+    border-radius: 6px; 
+}
+
+/* Code Snippet */
+div.sourceCode {
+    margin-top: $margin-medium;
+    margin-bottom: $margin-medium;
+}
+pre.sourceCode {
+    font-size: 85%;
+    line-height: $font-height;
+    padding: $margin-small;
+    overflow: auto;
+    background-color: $color-background-shaded;
+    border-radius: 6px;
+    code {
+        display: inline;
+        padding: 0;
+        margin: 0;
+        overflow: visible;
+        line-height: inherit;
+        word-wrap: normal;
+        background-color: transparent;
+        border: 0;
+        counter-reset: line;
+        > span:before{
+            content: counter(line)  ". ";
+        }
+        > span {
+            counter-increment: line;
+        }
+    }
+    
+}

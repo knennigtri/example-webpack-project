@@ -1,0 +1,51 @@
+/************* TOC Customization *************/
+
+$font-size-toc: 12pt;
+
+/* TOC black links */
+.toc {
+    div{
+        font-size: 16pt;
+        font-weight: 700;
+        border-bottom: 1px solid #000;
+        padding-bottom: $padding-small;
+    }
+    
+    ul li, ul ul li, ul ul ul li {
+        list-style: none;
+    }
+
+    a {
+        color: $font-color;
+        text-decoration: none;
+    }
+
+    /***** level 1 style *****/
+    ul > li > a {
+        margin-left: 0em;
+        font-size: $font-size-toc;
+        font-weight: normal;
+    }
+
+    /***** Level 2 style *****/
+    ul > li > ul > li > a {
+        margin-left: 1em;
+        font-size: $font-size-toc;
+    }
+
+    /***** Level 3 style *****/
+    ul > li > ul > li > ul > li > a {
+        margin-left: 2em;
+        color: gray;
+        font-size: $font-size-toc;
+    }
+
+    ul > li > ul{
+        // border-top: .1em solid $font-color;
+        margin-bottom: 2em;
+    }
+
+    li, a {
+        margin: .5em;
+    }
+}
